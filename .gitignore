@@ -1,0 +1,38 @@
+# == GLOBAL ==
+.DS_Store
+*.log
+*.iml
+.idea/
+.vscode/
+node_modules/
+dist/
+.env
+*.env
+*.swp
+
+# == BACKEND (Java/Spring Boot) ==
+/backend/target/
+backend/.classpath
+backend/.project
+backend/.settings/
+backend/hs_err_pid*
+backend/*.iws
+
+# IntelliJ
+/backend/.idea/
+backend/*.iml
+
+# == FRONTEND (Angular/Node) ==
+/frontend/node_modules/
+frontend/dist/
+frontend/.angular/cache/
+frontend/.angular/local/
+frontend/.env
+
+# WebStorm
+/frontend/.idea/
+frontend/*.iml
+
+# == SYSTEM FILES ==
+Thumbs.db
+ehthumbs.db
