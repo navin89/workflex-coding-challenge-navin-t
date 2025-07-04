@@ -1,0 +1,65 @@
+<table mat-table [dataSource]="dataSource" matSort class="styled-table">
+
+  <!-- Employee Column -->
+  <ng-container matColumnDef="employee">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header>Employee</th>
+    <td mat-cell *matCellDef="let row">{{ row.employee }}</td>
+  </ng-container>
+
+  <!-- Origin Column with Flag -->
+  <ng-container matColumnDef="origin">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header>Origin</th>
+    <td mat-cell *matCellDef="let row">
+      <span class="flag">{{ getFlag(row.origin) }}</span>
+      {{ getCountry(row.origin) }}
+    </td>
+  </ng-container>
+
+  <!-- Destination Column with Flag -->
+  <ng-container matColumnDef="destination">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header>Destination</th>
+    <td mat-cell *matCellDef="let row">
+      <span class="flag">{{ getFlag(row.destination) }}</span>
+      {{ getCountry(row.destination) }}
+    </td>
+  </ng-container>
+
+  <!-- Start Date Column -->
+  <ng-container matColumnDef="start">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header>Start</th>
+    <td mat-cell *matCellDef="let row">{{ row.start }}</td>
+  </ng-container>
+
+  <!-- End Date Column -->
+  <ng-container matColumnDef="end">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header>End</th>
+    <td mat-cell *matCellDef="let row">{{ row.end }}</td>
+  </ng-container>
+
+  <!-- Working Days Column -->
+  <ng-container matColumnDef="workingDays">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header>Working days</th>
+    <td mat-cell *matCellDef="let row">{{ row.workingDays }}</td>
+  </ng-container>
+
+  <!-- Risk Column with SVG Icon -->
+  <ng-container matColumnDef="risk">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header>Risk</th>
+    <td mat-cell *matCellDef="let row">
+      <img [src]="getRiskSvg(row.risk)" class="risk-icon" alt="risk" />
+      <span [ngClass]="getRiskClass(row.risk)">
+    {{ getRiskLabel(row.risk) }}
+  </span>
+    </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"
+      [ngClass]="{
+        'hover': hoveredRow === row,
+        'striped': isStriped(row)
+      }"
+      (mouseenter)="hoveredRow = row"
+      (mouseleave)="hoveredRow = null">
+  </tr>
+</table>

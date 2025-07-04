@@ -1,11 +1,13 @@
-import { Component } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {WorkationTableComponent} from './workation-table/workation-table.component';
 
 @Component({
   selector: 'app-root',
-  imports: [],
   templateUrl: './app.component.html',
+  imports: [
+    WorkationTableComponent
+  ],
   styleUrl: './app.component.css'
 })
-export class AppComponent {
-  title = 'frontend';
-}
+export class AppComponent {}
+

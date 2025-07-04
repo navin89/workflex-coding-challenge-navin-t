@@ -1,0 +1,60 @@
+::ng-deep .row-hover {
+  background: #f5f5f5 !important;
+}
+
+.styled-table {
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  font-family: 'Inter', Arial, sans-serif;
+  font-size: 15px;
+  border-collapse: separate;
+  width: 100%;
+}
+
+.styled-table th {
+  background: #f4f7fb;
+  color: #334155;
+  font-weight: 600;
+  font-size: 16px;
+  padding: 10px 8px;
+}
+
+.styled-table td {
+  padding: 10px 8px;
+  vertical-align: middle;
+  font-size: 15px;
+}
+
+.styled-table tr.striped {
+  background: #f9fbfd;
+}
+
+.styled-table tr.hover, .styled-table tr:hover {
+  background: #e3f2fd !important;
+}
+
+.flag {
+  font-size: 20px;
+  margin-right: 6px;
+  vertical-align: middle;
+}
+
+.risk-icon {
+  width: 16px;
+  height: 16px;
+  vertical-align: middle;
+  margin-right: 6px;
+}
+.risk-green {
+  color: #2cb67d;
+  font-weight: 500;
+}
+.risk-red {
+  color: #f43f5e;
+  font-weight: 500;
+}
+.risk-yellow {
+  color: #facc15;
+  font-weight: 500;
+}
