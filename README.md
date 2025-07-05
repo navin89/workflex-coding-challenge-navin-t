@@ -40,7 +40,7 @@ cd backend
 2. **Build and start the backend:**
    ./mvnw spring-boot:run
     - The backend will import `workations.csv` from `src/main/resources/data/`.
-    - The REST API will be available at `http://localhost:8080/api/workations`.
+    - The REST API will be available at `http://localhost:8080/workflex/workation`.
 
 3. **(Optional) Access H2 Console:**
   - Go to [http://localhost:8080/h2-console](http://localhost:8080/h2-console)
