@@ -1,6 +1,6 @@
-# Workation Challenge Submission
+# Workation
 
-A full-stack demo application for managing and displaying "workations" (remote work trips), built for the WorkFlex coding challenge.
+A full-stack demo application
 
 ---
 
@@ -120,6 +120,6 @@ mainFolder/
 
 ## Author
 
-Submitted by Navin Tamilchelvam for the WorkFlex coding challenge.
+Submitted by Navin Tamilchelvam.
 
     
